@@ -1,0 +1,22 @@
+meta {
+  name: users-opt
+  type: http
+  seq: 8
+}
+
+get {
+  url: http://localhost:8000/api/users
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 10|{{token}}
+}
+
+body:json {
+  {
+    "email": "rrd@webmania.cc",
+    "password": "rrd"
+  }
+}

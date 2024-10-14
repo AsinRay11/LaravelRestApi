@@ -1,0 +1,22 @@
+meta {
+  name: products
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:8000/api/products
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "category": "Különleges",
+    "name": "Piszelisz",
+    "description": "Fanyar vitaminbomba",
+    "picture": "https://hur.webmania.cc/img/pyselis.jpg",
+    "price": 8000,
+    "stock": 100
+  }
+}
